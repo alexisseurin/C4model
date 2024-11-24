@@ -9,9 +9,9 @@ workspace {
             // containers
             webApp = container "Web Application" "Website of the online store" "React" "Frontend"
             orderSrv = container "Order service" "Online order management" "Node.js" "Backend" {
-                userController = component "User Controller" ""
-                eventService = component "Event Service" ""
-
+                userController = component "User Controller"
+                eventService = component "Event Service"
+                emailService = component "Email Service"
             }
             catalogSrv = container "Web catalog service" "Reference of all items of the online store" "Node.js" "Backend" 
             orderDb = container "Order database" "Orders list" "PostgreSQL" "Database"
@@ -33,14 +33,26 @@ workspace {
         orderSrv -> catalogSrv "Get items through a REST API" "HTTPS"
         orderSrv -> logistics "Send delivery request" "RabbitMQ"
         orderSrv -> payment "Send payment request" "HTTPS"
-        orderSrv -> orderDb "Read and write in the database" "SQL TCP/IP"
-        orderSrv -> catalogDb "Read in the database" "SQL TCP/IP"
+        orderSrv -> orderDb "Read and write in the database" "SQL/TCP"
+        orderSrv -> catalogDb "Read in the database" "SQL/TCP"
+
+        // Relationships towards components
+        userController -> eventService "Uses"
+        eventService -> orderDb "Read and write in the database" "SQL/TCP"
+        
+
     }
 
     views {
         // Diagrams
         systemContext store "StoreContext" {
             include *
+            animation {
+                customer
+                store
+                logistics
+                payment
+            }
             autoLayout
         }
 
