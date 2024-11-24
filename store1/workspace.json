@@ -1,0 +1,128 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2024-11-24T12:43:03Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Online customer of the platform",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Web Customer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "customer"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "2",
+        "id" : "5",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Clients can place an order online",
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Web store",
+      "properties" : {
+        "structurizr.dsl.identifier" : "store"
+      },
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "4",
+        "id" : "6",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "3",
+        "id" : "7",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Stock management and orders delivery",
+      "documentation" : { },
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Logistics & Delivery",
+      "properties" : {
+        "structurizr.dsl.identifier" : "logistics"
+      },
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Payment management and billing",
+      "documentation" : { },
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Payment & Billing",
+      "properties" : {
+        "structurizr.dsl.identifier" : "payment"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "Name",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgY3VzdG9tZXIgPSBwZXJzb24gIldlYiBDdXN0b21lciIgIk9ubGluZSBjdXN0b21lciBvZiB0aGUgcGxhdGZvcm0iCgogICAgICAgIHN0b3JlID0gc29mdHdhcmVTeXN0ZW0gIldlYiBzdG9yZSIgIkNsaWVudHMgY2FuIHBsYWNlIGFuIG9yZGVyIG9ubGluZSIKICAgICAgICBsb2dpc3RpY3MgPSBzb2Z0d2FyZVN5c3RlbSAiTG9naXN0aWNzICYgRGVsaXZlcnkiICJTdG9jayBtYW5hZ2VtZW50IGFuZCBvcmRlcnMgZGVsaXZlcnkiCiAgICAgICAgcGF5bWVudCA9IHNvZnR3YXJlU3lzdGVtICJQYXltZW50ICYgQmlsbGluZyIgIlBheW1lbnQgbWFuYWdlbWVudCBhbmQgYmlsbGluZyIKCiAgICAgICAgLy8gUmVsYXRpb25zaGlwcwogICAgICAgIGN1c3RvbWVyIC0+IHN0b3JlICJVc2VzIgogICAgICAgIHN0b3JlIC0+IHBheW1lbnQgIlVzZXMiCiAgICAgICAgc3RvcmUgLT4gbG9naXN0aWNzICJVc2VzIgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICAvLyBEaWFncmFtcwogICAgICAgIHN5c3RlbUNvbnRleHQgc3RvcmUgIlN0b3JlQ29udGV4dCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgLy8gVGhlbWUgYW5kIHN0eWxlCiAgICAgICAgdGhlbWUgZGVmYXVsdAogICAgfQoKfQ=="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "StoreContext",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : { },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 1900,
+        "width" : 1600
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 574,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 574,
+        "y" : 799
+      }, {
+        "id" : "3",
+        "x" : 199,
+        "y" : 1399
+      }, {
+        "id" : "4",
+        "x" : 949,
+        "y" : 1399
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "StoreContext",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "5"
+      }, {
+        "id" : "6"
+      }, {
+        "id" : "7"
+      } ],
+      "softwareSystemId" : "2"
+    } ]
+  }
+}
