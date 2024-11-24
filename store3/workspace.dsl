@@ -8,8 +8,12 @@ workspace {
 
             // containers
             webApp = container "Web Application" "Website of the online store" "React" "Frontend"
-            orderSrv = container "Order service" "Online order management" "Node.js" "Backend"
-            catalogSrv = container "Web catalog service" "Reference of all items of the online store" "Node.js" "Backend"
+            orderSrv = container "Order service" "Online order management" "Node.js" "Backend" {
+                userController = component "User Controller" ""
+                eventService = component "Event Service" ""
+
+            }
+            catalogSrv = container "Web catalog service" "Reference of all items of the online store" "Node.js" "Backend" 
             orderDb = container "Order database" "Orders list" "PostgreSQL" "Database"
             catalogDb = container "Catalog database" "Catalog list" "PostgreSQL" "Database"
         }
@@ -42,7 +46,13 @@ workspace {
 
         container store "StoreContainers" {
             include *
-            // autoLayout
+            autoLayout
+            description "There are containers"
+        }
+
+        component orderSrv "StoreComponent" {
+            include *
+            autoLayout
         }
 
         // Theme and style
