@@ -19,7 +19,7 @@ workspace {
 
     views {
         // Diagrams
-        systemContext softwareSystem "StoreContext" {
+        systemContext store "StoreContext" {
             include *
             autoLayout
         }
