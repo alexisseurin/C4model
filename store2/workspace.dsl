@@ -38,9 +38,7 @@ workspace {
 
         // Relationships towards components
         userController -> eventService "Uses"
-        eventService -> orderDb "Read and write in the database" "SQL/TCP"
-        
-
+        eventService -> orderDb "Read and write in the database" "SQL/TCP"  
     }
 
     views {
